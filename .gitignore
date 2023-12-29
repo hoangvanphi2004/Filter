@@ -1,0 +1,9 @@
+# Data
+lightning_logs
+cs194-26-fa20-proj4
+
+# Model
+resnet-for-face-points-recognize-state-dict.pth
+resnet-for-face-points-recognize_state_dict.pth
+resnet-for-face-points-recognize.pth
+Plan.txt

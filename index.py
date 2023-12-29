@@ -23,6 +23,7 @@ while(True):
                                 pointList[1, index].item() * config.INPUT_IMAGE_HEIGHT_SIZE / configBase.IMG_SIZE\
                             ];
     image = applyHatFilter(image = image, predict = predictPoints, path = "LuffyHat.png");
+    
     # ### ----- predict points ----- ###
     # for point in predictPoints:
     #     image[int(point[1]), int(point[0])] = (0, 0, 255);

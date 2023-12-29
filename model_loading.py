@@ -5,7 +5,7 @@ from Base import model, config;
 
 def loadModel():
     net = model.Model();
-    net.load_state_dict(torch.load("resnet-for-face-points-recognize_state_dict.pth"));
+    net.load_state_dict(torch.load("resnet-for-face-points-recognize-state-dict.pth"));
     return net;
     
 def predictKeypoints(image, net):

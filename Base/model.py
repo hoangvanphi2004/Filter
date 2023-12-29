@@ -52,7 +52,7 @@ class Model(pl.LightningModule):
         self.log('val_loss', loss);
         return loss;
     def configure_optimizers(self):
-        return torch.optim.Adam(self.parameters(), lr = 1e-4);
+        return torch.optim.Adam(self.parameters(), lr = 8e-5);
 
 # ### ----- Test ----- #####
 # print(list(vgg16(pretrained = True).children())[:-2]);

@@ -13,8 +13,9 @@ import numpy as np;
 import re;
 import math;
 import random;
-from .config import IMG_SIZE;
+from config import IMG_SIZE;
 import xml.etree.ElementTree as ET
+import random;
 
 import matplotlib.pyplot as plt;
 
@@ -65,12 +66,12 @@ class Data(Dataset):
         
         width = img.shape[1];
         height = img.shape[0];    
-        label['box'] = label['box'].unsqueeze(0);
-
-        transformResult = A.Compose([\
-            geometric.resize.SmallestMaxSize(max_size = IMG_SIZE)\
-        ], bbox_params = A.BboxParams(format = "coco", label_fields = ["class_labels"]), keypoint_params = A.KeypointParams(format = "xy", remove_invisible=False)\
-        )(image = img, bboxes = label["box"], class_labels = ["human-face"], keypoints = label["points"]);
+        label['box'] = np.array([label['box']]);
+        
+        transform = A.Compose([\
+            geometric.resize.SmallestMaxSize(max_size = IMG_SIZE),\
+        ], bbox_params = A.BboxParams(format = "coco", label_fields = ["class_labels"]), keypoint_params = A.KeypointParams(format = "xy", remove_invisible=False));
+        transformResult = transform(image = img, bboxes = label["box"], class_labels = ["human-face"], keypoints = label["points"]);
         
         img = transformResult['image'];
         label['box'] = transformResult['bboxes'];
@@ -83,16 +84,18 @@ class Data(Dataset):
             top = 0;
             left = max(0, min(int(label['box'][0][0] - (IMG_SIZE - label['box'][0][2]) / 2), int(IMG_SIZE / height * width) - IMG_SIZE));
         
-        transformResult = A.Compose([\
+        transform = A.Compose([\
             crops.transforms.Crop(x_min = left, y_min = top, x_max = left + IMG_SIZE, y_max = top + IMG_SIZE),\
+            geometric.transforms.ShiftScaleRotate(shift_limit = 0.001, scale_limit = (-0.4, 0)),\
             A.transforms.Normalize(),\
             ToTensorV2()\
-        ], bbox_params = A.BboxParams(format = "coco", label_fields = ["class_labels"]), keypoint_params = A.KeypointParams(format = "xy", remove_invisible=False)\
-        )(image = img, bboxes = label["box"], class_labels = ["human-face"], keypoints = label["points"]); 
+        ], bbox_params = A.BboxParams(format = "coco", label_fields = ["class_labels"]), keypoint_params = A.KeypointParams(format = "xy", remove_invisible=False));
+        transformResult = transform(image = img, bboxes = label["box"], class_labels = ["human-face"], keypoints = label["points"]); 
         
         img = transformResult['image'];
-        label['box'] = transformResult['bboxes'][0];
-        label['points'] = transformResult['keypoints'];
+        if(len(transformResult['bboxes']) != 0):
+            label['box'] = torch.tensor(transformResult['bboxes'][0]);
+        label['points'] = torch.tensor(transformResult['keypoints']);
         
         return img, label;
         
@@ -109,9 +112,9 @@ class Data(Dataset):
         image = np.array(image);
         
         box = self.data[index].find('box');
-        points = torch.tensor([[int(point.attrib['x']), int(point.attrib['y'])] for point in box.findall('part')]);
+        points = np.array([[int(point.attrib['x']), int(point.attrib['y'])] for point in box.findall('part')]);
         label = {};
-        label['box'] = torch.tensor([max(int(box.attrib['left']), 0),\
+        label['box'] = np.array([max(int(box.attrib['left']), 0),\
                                     max(int(box.attrib['top']), 0),\
                                     min(int(box.attrib['width']), image.shape[1] - max(int(box.attrib['left']), 0) - 1),\
                                     min(int(box.attrib['height']), image.shape[0] - max(int(box.attrib['top']), 0) - 1)]);
@@ -119,6 +122,7 @@ class Data(Dataset):
         
         image, label = self.dataAugment(image, label);
         label['points'] = torch.stack([torch.stack([point[0], point[1]], dim = 0) for point in label['points']], dim = 0)
+        
         return image, label;
             
 
