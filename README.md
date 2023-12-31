@@ -1,6 +1,6 @@
 # Filter App
 ## Overview
-This app is an app to apply hat filter to a face by predict keypoints and use some math to find the hat position. </br> In this app, I use resnet34 model to predict the keypoints. I also try to use vgg11 to predict points but its not as good as resnet34.</br></br> Some of the frameworks/libraries i use:
+This app is an app to apply hat filter to a face by predict keypoints and use some math to find the hat position. </br> In this app, I use resnet34 model to predict the keypoints. I also try using vgg11 to predict points but its not as good as resnet34.</br></br> Some of the frameworks/libraries i use:
 - pytorch
 - pytorch-lightning
 - albumentations
