@@ -51,7 +51,7 @@ def turnAndPadding(point1, point2, object):
     rotateMatrix = cv2.getRotationMatrix2D(center = center, angle = turnDeg, scale = 1);
     return cv2.warpAffine(object, rotateMatrix, (object.shape[1], object.shape[0]));
 
-def applyHatFilter(image, predict, path):
+def applyHatFilter(image, predict, path, height = 0):
     top_leftEye = predict[19];
     top_rightEye = predict[24];
     distance = int(math.dist(top_leftEye, top_rightEye) * 5);
@@ -67,7 +67,7 @@ def applyHatFilter(image, predict, path):
     hatImage = cv2.resize(hatImage, (distance, distance), interpolation = cv2.INTER_LINEAR);
     
     paddingImage = turnAndPadding(top_leftEye, top_rightEye, hatImage);
-    corner = cornerPoint(top_leftEye, top_rightEye, distance / 8, paddingImage);
+    corner = cornerPoint(top_leftEye, top_rightEye, (distance * (height / 4)) / 8, paddingImage);
     fullImage = overlapIamge(image, paddingImage, corner[0], corner[1]);
     return fullImage;
  

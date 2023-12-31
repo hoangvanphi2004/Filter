@@ -1,7 +1,6 @@
 import torch;
 import matplotlib.pyplot as plt;
-import config as configApp;
-from Base import model, config;
+import model;
 
 def loadModel():
     net = model.Model();

@@ -17,8 +17,6 @@ from config import IMG_SIZE;
 import xml.etree.ElementTree as ET
 import random;
 
-import matplotlib.pyplot as plt;
-
 class Data(Dataset):
     def dataAugment(self, img, label):
         # ### ------------ Flip Image ---------------- ###
@@ -86,7 +84,7 @@ class Data(Dataset):
         
         transform = A.Compose([\
             crops.transforms.Crop(x_min = left, y_min = top, x_max = left + IMG_SIZE, y_max = top + IMG_SIZE),\
-            geometric.transforms.ShiftScaleRotate(shift_limit = 0.001, scale_limit = (-0.4, 0)),\
+            geometric.transforms.ShiftScaleRotate(scale_limit = (-0.4, 0)),\
             A.transforms.Normalize(),\
             ToTensorV2()\
         ], bbox_params = A.BboxParams(format = "coco", label_fields = ["class_labels"]), keypoint_params = A.KeypointParams(format = "xy", remove_invisible=False));
