@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 # Other
 .conda
 tb_logs
+test.py
 
-=======
->>>>>>> 0714221dcfb003782c8c6066cc85d733e2926b4c
 # Data
 lightning_logs
 cs194-26-fa20-proj4
