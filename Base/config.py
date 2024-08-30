@@ -11,3 +11,5 @@ device = (
 PREDICT_SIZE = 68 * 2;
 X_COLS_LEN = 68;
 IMG_SIZE = 128;
+
+

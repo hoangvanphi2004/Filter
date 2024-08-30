@@ -3,7 +3,7 @@ from torch import nn;
 import pytorch_lightning as pl;
 from torchvision.models import resnet18;
 import numpy as np;
-from config import IMG_SIZE, PREDICT_SIZE;
+from .config import IMG_SIZE, PREDICT_SIZE;
 
 class Model(pl.LightningModule):
     def __init__(self):

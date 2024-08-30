@@ -13,7 +13,7 @@ import numpy as np;
 import re;
 import math;
 import random;
-from config import IMG_SIZE;
+from .config import IMG_SIZE;
 import xml.etree.ElementTree as ET
 import random;
 
@@ -109,8 +109,9 @@ class Data(Dataset):
             geometric.transforms.ShiftScaleRotate(),\
             A.transforms.Normalize(),\
             ToTensorV2()\
-        ], keypoint_params = A.KeypointParams(format = "xy", remove_invisible=False));
-        transformResult = transform(image = img, class_labels = ["human-face"], keypoints = label["points"]); 
+        ], keypoint_params = A.KeypointParams(format = "xy", remove_invisible = False));
+
+        transformResult = transform(image = img, keypoints = label["points"]); 
         
         img = transformResult['image'];
         label['points'] = torch.tensor(transformResult['keypoints']);

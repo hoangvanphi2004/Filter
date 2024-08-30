@@ -1,11 +1,16 @@
 # Other
+env
 .conda
 tb_logs
 test.py
+image.png
+kalman_filter_test.py
+__pycache__
 
 # Data
 lightning_logs
 cs194-26-fa20-proj4
+output
 
 # Model
 resnet-for-face-points-recognize-state-dict.pth
