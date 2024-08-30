@@ -92,7 +92,7 @@ Some example of bad pixel-range value:
  
 After you can remove the background, you need to identify the face points in the mask. The face points in the mask is corresponding to the face points in your face when you use the app. You can draw the points follow the face below, the point you set on the mask would be the correspoinding point on the face.   
 
-![image](https://github.com/user-attachments/assets/04bba697-70ca-4b35-9b25-271f8489688d) ![image](https://github.com/user-attachments/assets/db03c009-02f6-4e31-ab62-2a7fe9c644ea)
+![image](https://github.com/user-attachments/assets/04bba697-70ca-4b35-9b25-271f8489688d)   ![image](https://github.com/user-attachments/assets/db03c009-02f6-4e31-ab62-2a7fe9c644ea)
 
 To assign the points to the mask, you need to run this command:
 
@@ -150,5 +150,17 @@ You need to specificly indentify the name of the file in the path. It would requ
 ## Image About The App
 
 ## Credit
+- Many thank to <a href="https://www.youtube.com/watch?v=dK-KxuPi768">this</a> video series for teaching me alot about opencv and delaunay triangulatiton 
+- Thank to <a href="https://abel.math.harvard.edu/archive/116_fall_03/handouts/kalman.pdf">this</a> paper which help me alot in understanding Kalman Filter 
+- Thank to Nguyen Dang Huynh and Le Vu Minh for helping me in the project
+- And also, to the person who bring me here, the one I respect the most, <a href="https://github.com/PAD2003"> Phan Anh Duc </a>
 
-## Contribution
+## Contact
+If you have any idea or find any mistake in the project, please tell me via:
+- Email: hoangvanphi2004@gmail.com
+- Facebook: fb.com/haongvanphi2004
+<div align="center">
+
+  # ~~~ Thanks for visiting my repo ~~~
+  
+</div>
