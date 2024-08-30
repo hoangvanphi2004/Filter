@@ -83,11 +83,11 @@ Double click on the area that you want to be the background, the background area
 After you finish, press 'q' to save the mask file. The file would automatically save as 'mask.png'.
 
 Some example of bad pixel-range value:
-- The range is too small. As you can see the border of the image have many tiny white dot that we dont expect. It will make the mask look ugly
+- <b>The range is too small.</b> As you can see the border of the image have many tiny white dot that we dont expect. It will make the mask look ugly
   
   ![image](https://github.com/user-attachments/assets/65eb620a-d22d-4b26-abf1-74725ac4c2bc)
   
-- The range is too big. The range is too big that the background start invade the mask area, make it look ugly too
+- <b>The range is too big.</b> When the range is too big, he background start invade the mask area, make it look ugly too
 
   ![image](https://github.com/user-attachments/assets/df88d0f1-cb64-43b9-99a7-0d623ddbed23)
  
