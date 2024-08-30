@@ -101,7 +101,7 @@ To assign the points to the mask, you need to run this command:
 python3 keypoints_predict.py
 ```
 
-A window will appear, it will contain the mask like previous step. double click on the point you want to assign. Remember, you need to assign point-after-point respectively. The number of the point  you are assigning is appeared in the terminal. If you mis-assign a point, you can always re-assign it by press 'd'. If you want to assign all the point from beginnning, you can press 'r'. After you assigned all 68 points, the window will auto close. If you dont want to assign anymore, press 'q'.
+A window will appear, it will contain the mask like previous step. double click on the point you want to assign. Remember, you need to assign point-after-point respectively. The number of the point you are going to assign is appeared in the terminal. If you mis-assign a point, you can always re-assign it by press 'd'. If you want to assign all the point from beginnning, you can press 'r'. After you assigned all 68 points, the window will auto close. If you dont want to assign anymore, press 'q'.
 
 ![image](https://github.com/user-attachments/assets/203e9894-cac9-4869-86f3-c04224f0e6c6)
 
