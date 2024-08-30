@@ -144,9 +144,9 @@ Beside the filtering features, i also provide a code to train the model to predi
 ```bash
 python3 train.py [path_to_save_file]
 ```
-You need to specificly indentify the name of the file in the path. It would require you to have gpu in your computer. After you finished training your model, you can open file keypoints_predict.py and change the "resnet-for-face-points-recognize-state-dict.pth" to the path to your model to use your model.
-
 ![image](https://github.com/user-attachments/assets/aaec1f38-9107-462a-bf94-a996556948d0)
+
+You need to specificly indentify the name of the file in the path. It would require you to have gpu in your computer. After you finished training your model, you can open file keypoints_predict.py and change the "resnet-for-face-points-recognize-state-dict.pth" to the path to your model to use your model.
 
 ## Image About The App
 ![Filter_screenshot2_30 08 2024](https://github.com/user-attachments/assets/f3d54b72-e641-415b-8330-7ffb82abb465)
