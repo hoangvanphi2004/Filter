@@ -6,10 +6,10 @@
 </div>
 
 ## Overview
-Deep learning have developed rapidly in the past few years, many aspect of it have been explored to increase the life quality. In the entertainment industry, many application like tiktok, facebook and so on have applied this advanced technology in their application, create thousand of trendings. And with the desire to master this technology, this repo is created to be a great step in my life long learning journey. This repo is about an filter app which you can apply a mask from an png image to your face. Beside the mask filder, i also have mask filter and a mode to make the mask floating. I have trained a model <a href="https://drive.google.com/file/d/1Cu9A3EWkNJ34Zbr6U0hkQUgG4qzMaE5P/view?usp=drive_link">here</a> so you can just download it and paste it to the repo folder. If you want to use yourown model, you can train it by yourself! i have an file to help you in this.
+Deep learning have developed rapidly in the past few years, many aspects of it have been explored to increase human life quality. In the entertainment industry, many application like tiktok, facebook and so on have applied this advanced technology in their applications, create thousand of trendings. And with the desire to master these technology, this repo is created to be a great step in my life long learning journey. This repo is about an filter app which you can apply a mask from an png image to your face. Beside the mask filder, i also have hat filter and a mode to make the mask floating. I have trained a model <a href="https://drive.google.com/file/d/1Cu9A3EWkNJ34Zbr6U0hkQUgG4qzMaE5P/view?usp=drive_link">here</a> so you can just download it and paste it to the repo folder. If you want to use your own model, you can train it by yourself! i have a file to help you in this.
 
 ## Feature
-I have build many features for the app, some of it can be listed here:
+I have built many features for the app, some of it can be listed here:
 - Show facial keypoints
 - Apply hat filter
 - Apply mask filter
@@ -17,15 +17,15 @@ I have build many features for the app, some of it can be listed here:
 To see more about the features, please read the How to use section.
 ## How to use
 ### Installation
-First you must have python installed in for computer. You can go to [this page](https://www.python.org/downloads/) to download the latest version 
+First you must have python installed in your computer. You can go to [this page](https://www.python.org/downloads/) to download the latest version 
 
 ![image](https://github.com/user-attachments/assets/cdd7de4c-d0ca-4d91-ba0c-d40d867251f8)
 
-After that, clone this git repo to the folder you want. Depend on you OS, you will need to run different file:
+After that, clone this git repo to a folder. Depend on you OS, you will need to run different file:
 - If you are using Linux-like OS, you must run InstallLinux.sh
 - If you are using Window, you must run InstallWindow.bat
 
-Before run any filter, you need to active virtual environment. To active the virtual environment, also depend on your OS, you will need to run:
+Before running any filter, you need to active virtual environment. To active the virtual environment, also depend on your OS, you will need to run:
 - With Window:
 
 ```bash
@@ -39,15 +39,15 @@ source ./env/bin/activate
 ```
 
 ### Hat Filter
-To run hat filter, the most basic commad you can run is:
+To run hat filter, the most basic command you can run is:
 
 ```bash
 python3 index.py hat-filter
 ```
 
-This command will use the LuffyHat.png as the filter image to apply the filter
+This command will use the LuffyHat.png as an filter image to apply the filter
 
-To use other image, use can add the specific path to your filter image:
+To use other image, you can add the specific path to your filter image:
 
 ```bash
 python3 index.py hat-filter [path_to_your_iamge]
@@ -63,7 +63,7 @@ If the distance is short, the hat will be near your face. If the distance is lon
 ![Untitled](https://github.com/user-attachments/assets/f6ec7ade-e8e6-4469-bbd5-c29ba5f7a49e)
 
 ### Mask Filter
-To run mask filter, you need to have a mask file. The mask need to have white or black background (no background is even better). Some time the mask may be broken because the edge is blured. In that case, you need to remove that blur. To do this, you need to run this command:
+To run mask filter, you need to have a mask image. The mask image need to have white or black background (no background is even better). Some time the mask may be broken because the edge is blured. In that case, you need to remove that blur. To do this, you need to run this command:
 
 ```bash
 python3 adjustBackground.py [pixel-range] [path_to_your_mask]
@@ -87,11 +87,11 @@ Some example of bad pixel-range value:
   
   ![image](https://github.com/user-attachments/assets/65eb620a-d22d-4b26-abf1-74725ac4c2bc)
   
-- <b>The range is too big.</b> When the range is too big, he background start invade the mask area, make it look ugly too
+- <b>The range is too big.</b> When the range is too big, the background starts to invade the mask area, make it look ugly too
 
   ![image](https://github.com/user-attachments/assets/df88d0f1-cb64-43b9-99a7-0d623ddbed23)
  
-After remove the background, you need to identify the face points in the mask. The face points in the mask is corresponding to the face points in your face when you use the app. You can draw the points follow the face below, the point you set on the mask would be the correspoinding point on the face.   
+After removing the background, you need to identify the face points in the mask. The face points in the mask is corresponding to the face points in your face when you use the app. You can draw the points follow the face below, the point you set on the mask would be the correspoinding point on the face.   
 
 ![image](https://github.com/user-attachments/assets/04bba697-70ca-4b35-9b25-271f8489688d)   ![image](https://github.com/user-attachments/assets/db03c009-02f6-4e31-ab62-2a7fe9c644ea)
 
@@ -106,8 +106,6 @@ A window will appear, it will contain the mask like previous step. double click 
 ![image](https://github.com/user-attachments/assets/203e9894-cac9-4869-86f3-c04224f0e6c6)
 
 Now you have all the requirement. Let just run the filter!
-
-Run this command to apply the mask:
 
 ```bash
 python3 index.py mask-filter
@@ -126,7 +124,7 @@ Or
 python3 index.py keypoints
 ```
 ### Other features
-If you want to make any of the filter above floating, you can just add "floating-mask" to the end of the command, for example:
+If you want to make any of the filters above floating, you can just add "floating-mask" to the end of the command, for example:
 
 ```bash
 python3 index.py mask-filter floating-mask
@@ -139,7 +137,7 @@ python3 index.py mask-filter save-video
 ```
 
 ### Train model
-Beside the filtering features, i also provide a code to train the model to predict the keypoint. To do that you need to download <a href="https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/">this dataset</a> and put it in the project folder. After that you can run:
+Beside the filtering features, i also provide a program to train the model to predict the keypoints. To do that you need to download <a href="https://ibug.doc.ic.ac.uk/resources/facial-point-annotations/">this dataset</a> and put it in the project folder. After that you can run:
 
 ```bash
 python3 train.py [path_to_save_file]
@@ -154,10 +152,10 @@ You need to specificly indentify the name of the file in the path. It would requ
 ![Filter_screenshot_30 08 2024](https://github.com/user-attachments/assets/84b844f3-0667-4379-8593-39a3930d5d43)
 
 ## Credit
-- Many thank to <a href="https://www.youtube.com/watch?v=dK-KxuPi768">this</a> video series for teaching me alot about opencv and delaunay triangulatiton 
-- Thank to <a href="https://abel.math.harvard.edu/archive/116_fall_03/handouts/kalman.pdf">this</a> paper which help me alot in understanding Kalman Filter 
-- Thank to Nguyen Dang Huynh and Le Vu Minh for helping me in the project
-- And also, to the person who bring me here, the one I respect the most, <a href="https://github.com/PAD2003"> Phan Anh Duc </a>
+- Many thanks to <a href="https://www.youtube.com/watch?v=dK-KxuPi768">this</a> video series for teaching me alot about opencv and delaunay triangulatiton 
+- Thanks to <a href="https://abel.math.harvard.edu/archive/116_fall_03/handouts/kalman.pdf">this</a> paper which helped me alot in understanding Kalman Filter 
+- Thanks to Nguyen Dang Huynh and Le Vu Minh for helping me in the project
+- And also, to the person who brought me here, the one I respect the most, <a href="https://github.com/PAD2003"> Phan Anh Duc </a>
 
 ## Contact
 If you have any idea or find any mistake in the project, please tell me via:
