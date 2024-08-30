@@ -1,13 +1,19 @@
-# Filter App
+<div align="center">
+
+  # Filter App
+  
+</div>
+
 ## Overview
-This app is an app to apply hat filter to a face by predict keypoints and use some math to find the hat position. </br> In this app, I use resnet34 model to predict the keypoints. I also try using vgg11 to predict points but its not as good as resnet34.</br></br> Some of the frameworks/libraries i use:
-- pytorch
-- pytorch-lightning
-- albumentations
-- opencv
+Deep learning have developed rapidly in the past few years, many aspect of it have been explored to increase the life quality. In the entertainment industry, many application like tiktok, facebook and so on have applied this advanced technology in their application, create thousand of trendings. And with the desire to master this technology, this repo is created to be a great step in my life long learning journey. This repo is about an filter app which you can apply a mask from an png image to your face. Beside the mask filder, i also have mask filter and a mode to make the mask floating. I have trained a model <a href="https://drive.google.com/file/d/1Cu9A3EWkNJ34Zbr6U0hkQUgG4qzMaE5P/view?usp=drive_link">here</a> so you can just download it and paste it to the repo folder. If you want to use yourown model, you can train it by yourself! i have an file to help you in this.
+
 ## Feature
+I have build many features for the app, some of it can be listed here:
 - Show facial keypoints
 - Apply hat filter
+- Apply mask filter
+- Make the filter floating
+To see more about the features, please read the How to use section.
 ## How to use
 - First you must have python installed in for computer. You can go to [this page](https://www.python.org/downloads/) to download the latest version 
 - Download/clone this git repo
