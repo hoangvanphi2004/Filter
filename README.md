@@ -1,7 +1,8 @@
 <div align="center">
 
   # Filter App
-  
+  ![image](https://github.com/user-attachments/assets/0cdc3ccf-2bc6-47c4-90a7-f5cabf339642)
+
 </div>
 
 ## Overview
@@ -148,6 +149,9 @@ You need to specificly indentify the name of the file in the path. It would requ
 ![image](https://github.com/user-attachments/assets/aaec1f38-9107-462a-bf94-a996556948d0)
 
 ## Image About The App
+![Filter_screenshot2_30 08 2024](https://github.com/user-attachments/assets/f3d54b72-e641-415b-8330-7ffb82abb465)
+![Filter_screenshot1_30 08 2024](https://github.com/user-attachments/assets/afa2dac8-8f59-45ae-a9a5-13206ba4c0e1)
+![Filter_screenshot_30 08 2024](https://github.com/user-attachments/assets/84b844f3-0667-4379-8593-39a3930d5d43)
 
 ## Credit
 - Many thank to <a href="https://www.youtube.com/watch?v=dK-KxuPi768">this</a> video series for teaching me alot about opencv and delaunay triangulatiton 
