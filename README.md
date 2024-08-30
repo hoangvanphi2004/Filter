@@ -15,9 +15,14 @@ I have build many features for the app, some of it can be listed here:
 - Make the filter floating
 To see more about the features, please read the How to use section.
 ## How to use
+### Installation
 - First you must have python installed in for computer. You can go to [this page](https://www.python.org/downloads/) to download the latest version 
-- Download/clone this git repo
-- Open file Install.bat
+- After that, clone this git repo to the folder you want.
+- Depend on you OS, you will need to run different file:
+  - If you are using Linux-like OS, you must run InstallLinux.sh
+  - If you are using Window, you must run InstallWindow.bat
+### Hat Filter 
+  - Open file Install.bat
 - After that you can use the app by open commandline in the folder you download this repo into
   1. You can show the predict keypoints by using
      ```
