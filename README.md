@@ -90,7 +90,7 @@ Some example of bad pixel-range value:
 
   ![image](https://github.com/user-attachments/assets/df88d0f1-cb64-43b9-99a7-0d623ddbed23)
  
-After you can remove the background, you need to identify the face points in the mask. The face points in the mask is corresponding to the face points in your face when you use the app. You can draw the points follow the face below, the point you set on the mask would be the correspoinding point on the face.   
+After remove the background, you need to identify the face points in the mask. The face points in the mask is corresponding to the face points in your face when you use the app. You can draw the points follow the face below, the point you set on the mask would be the correspoinding point on the face.   
 
 ![image](https://github.com/user-attachments/assets/04bba697-70ca-4b35-9b25-271f8489688d)   ![image](https://github.com/user-attachments/assets/db03c009-02f6-4e31-ab62-2a7fe9c644ea)
 
