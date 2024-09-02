@@ -160,7 +160,7 @@ You need to specificly indentify the name of the file in the path. It would requ
 ## Contact
 If you have any idea or find any mistake in the project, please tell me via:
 - Email: hoangvanphi2004@gmail.com
-- Facebook: fb.com/haongvanphi2004
+- Facebook: fb.com/hoangvanphi2004
 <div align="center">
 
   # ~~~ Thanks for visiting my repo ~~~
